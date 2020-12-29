@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { DogsProps } from "./App";
 import "./DogList.css";
 
-function DogList({dogs}: DogsProps) {
+function DogList({ dogs }: DogsProps) {
   return (
     <div className="DogList">
       <div className="row mt-4">
@@ -14,7 +14,7 @@ function DogList({dogs}: DogsProps) {
         </div>
       </div>
       <div className="row">
-        {dogs.map(d => (
+        {dogs.map((d) => (
           <div className="col-3 text-center" key={d.name}>
             <img src={d.src} alt={d.name} />
             <h3 className="mt-3">

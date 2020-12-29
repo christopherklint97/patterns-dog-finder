@@ -4,16 +4,15 @@ import "./DogDetails.css";
 
 export interface DogProps {
   dog?: {
-    name: string,
-    age: number,
-    src: string,
-    facts: string[]
-  }
+    name: string;
+    age: number;
+    src: string;
+    facts: string[];
+  };
 }
 
-function DogDetails({dog}: DogProps) {
-
-  if (!dog) return <Redirect to="/dogs"/>
+function DogDetails({ dog }: DogProps) {
+  if (!dog) return <Redirect to="/dogs" />;
 
   return (
     <div className="row DogDetails">

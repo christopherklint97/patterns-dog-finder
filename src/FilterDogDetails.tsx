@@ -1,22 +1,22 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { DogsProps } from './App';
-import DogDetails from './DogDetails';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { DogsProps } from "./App";
+import DogDetails from "./DogDetails";
 
 interface ParamTypes {
-  name: string
+  name: string;
 }
 
-function FilterDogDetails({dogs}: DogsProps) {
-  const {name} = useParams<ParamTypes>();
+function FilterDogDetails({ dogs }: DogsProps) {
+  const { name } = useParams<ParamTypes>();
 
   if (name) {
     const currentDog = dogs.find(
-      dog => dog.name.toLowerCase() === name.toLowerCase()
+      (dog) => dog.name.toLowerCase() === name.toLowerCase()
     );
     return <DogDetails dog={currentDog} />;
   }
-  
+
   return null;
 }
 

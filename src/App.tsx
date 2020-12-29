@@ -11,14 +11,14 @@ import perry from "./images/perry.jpg";
 
 export interface DogsProps {
   dogs: {
-    name: string,
-    age: number,
-    src: string,
-    facts: string[]
-  }[]
+    name: string;
+    age: number;
+    src: string;
+    facts: string[];
+  }[];
 }
 
-function App({dogs}: DogsProps) {
+function App({ dogs }: DogsProps) {
   return (
     <div>
       <BrowserRouter>
@@ -39,8 +39,8 @@ export const dogs = [
     facts: [
       "Whiskey loves eating popcorn.",
       "Whiskey is a terrible guard dog.",
-      "Whiskey wants to cuddle with you!"
-    ]
+      "Whiskey wants to cuddle with you!",
+    ],
   },
   {
     name: "Duke",
@@ -49,8 +49,8 @@ export const dogs = [
     facts: [
       "Duke believes that ball is life.",
       "Duke likes snow.",
-      "Duke enjoys pawing other dogs."
-    ]
+      "Duke enjoys pawing other dogs.",
+    ],
   },
   {
     name: "Perry",
@@ -59,8 +59,8 @@ export const dogs = [
     facts: [
       "Perry loves all humans.",
       "Perry demolishes all snacks.",
-      "Perry hates the rain."
-    ]
+      "Perry hates the rain.",
+    ],
   },
   {
     name: "Tubby",
@@ -69,9 +69,9 @@ export const dogs = [
     facts: [
       "Tubby is really stupid.",
       "Tubby does not like walks.",
-      "Angelina used to hate Tubby, but claims not to anymore."
-    ]
-  }
+      "Angelina used to hate Tubby, but claims not to anymore.",
+    ],
+  },
 ];
 
 App.defaultProps = { dogs };
